@@ -5,6 +5,7 @@ import './App.css';
 class App extends Component {
 	handleOnClick = event => {
 		this.props.increaseCount();
+		// where does app get passed props?
 	};
 
 	render() {
@@ -15,14 +16,15 @@ class App extends Component {
 			</div>
 		);
 	}
-}
+} // end of app component!!!
 
+// separate function!
 const mapStateToProps = state => {
 	return {
 		items: state.items
 	};
 };
-
+// separate function!!
 const mapDispatchToProps = dispatch => {
 	return {
 		increaseCount: () => dispatch({ type: 'INCREASE_COUNT' })
